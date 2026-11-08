@@ -1,0 +1,2 @@
+import {SCHEMA} from './model.mjs';
+export const example=()=>({schema:SCHEMA,title:'Studio rail lengths',notes:'Invented arithmetic example, not a build plan. All lengths use the same material and cross-section. Trim allowances include their own cut losses.',unit:'mm',kerf:3000,trimStart:10000,trimEnd:10000,stocks:[{id:'s1',label:'Long stock',length:2400000,qty:2},{id:'s2',label:'Saved remnant',length:900000,qty:1}],parts:[{id:'p1',label:'Long rail',length:1100000,qty:2},{id:'p2',label:'Short rail',length:600000,qty:3},{id:'p3',label:'Small block',length:250000,qty:3}]});
