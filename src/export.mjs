@@ -4,7 +4,7 @@ const lines=(s,n)=>{const a=[...s];return Array.from({length:Math.ceil(a.length/
 export const projectJSON=p=>JSON.stringify(validate(p),null,2)+'\n';
 export const receipt=p=>({schema:'offcutlane-receipt-v1',project:validate(p),result:calculate(p)});
 export const receiptJSON=p=>JSON.stringify(receipt(p),null,2)+'\n';
-const colors=['#6f8978','#7b86a9','#b28d62','#8c7b9b','#73999b','#a57c7c'];
+const colors=['#42664e','#4e5d85','#805d32','#655070','#3f6c70','#805252'];
 export function layoutSVG(p){
  const a=calculate(p),bottom=150+a.bars.length*105,height=bottom+85+a.unplaced.length*65;
  let b='<rect width="1000" height="'+height+'" fill="#f6f3eb"/>'+lines(p.title,45).map((t,i)=>'<text x="35" y="'+(38+i*24)+'" font-size="23" font-weight="700">'+esc(t)+'</text>').join('');
