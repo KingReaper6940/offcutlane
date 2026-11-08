@@ -1,0 +1,159 @@
+{
+  "schema": "offcutlane-receipt-v1",
+  "project": {
+    "schema": "offcutlane-project-v1",
+    "title": "Studio rail lengths",
+    "notes": "Invented arithmetic example, not a build plan. All lengths use the same material and cross-section. Trim allowances include their own cut losses.",
+    "unit": "mm",
+    "kerf": 3000,
+    "trimStart": 10000,
+    "trimEnd": 10000,
+    "stocks": [
+      {
+        "id": "s1",
+        "label": "Long stock",
+        "length": 2400000,
+        "qty": 2
+      },
+      {
+        "id": "s2",
+        "label": "Saved remnant",
+        "length": 900000,
+        "qty": 1
+      }
+    ],
+    "parts": [
+      {
+        "id": "p1",
+        "label": "Long rail",
+        "length": 1100000,
+        "qty": 2
+      },
+      {
+        "id": "p2",
+        "label": "Short rail",
+        "length": 600000,
+        "qty": 3
+      },
+      {
+        "id": "p3",
+        "label": "Small block",
+        "length": 250000,
+        "qty": 3
+      }
+    ]
+  },
+  "result": {
+    "algorithm": "best-fit-decreasing-v1",
+    "requested": 8,
+    "placed": 8,
+    "unplaced": [],
+    "usedStock": 3,
+    "availableStock": 3,
+    "stockLength": 5700000,
+    "partLength": 4750000,
+    "kerfLoss": 24000,
+    "trimLoss": 60000,
+    "leftover": 866000,
+    "bars": [
+      {
+        "stock": "s1.1",
+        "label": "Long stock",
+        "length": 2400000,
+        "usable": 2380000,
+        "partLength": 2200000,
+        "kerfLoss": 6000,
+        "leftover": 174000,
+        "cuts": [
+          {
+            "piece": "p1.1",
+            "start": 10000,
+            "end": 1110000,
+            "kerfAfter": 3000,
+            "label": "Long rail",
+            "length": 1100000
+          },
+          {
+            "piece": "p1.2",
+            "start": 1113000,
+            "end": 2213000,
+            "kerfAfter": 3000,
+            "label": "Long rail",
+            "length": 1100000
+          }
+        ]
+      },
+      {
+        "stock": "s2.1",
+        "label": "Saved remnant",
+        "length": 900000,
+        "usable": 880000,
+        "partLength": 850000,
+        "kerfLoss": 6000,
+        "leftover": 24000,
+        "cuts": [
+          {
+            "piece": "p2.1",
+            "start": 10000,
+            "end": 610000,
+            "kerfAfter": 3000,
+            "label": "Short rail",
+            "length": 600000
+          },
+          {
+            "piece": "p3.1",
+            "start": 613000,
+            "end": 863000,
+            "kerfAfter": 3000,
+            "label": "Small block",
+            "length": 250000
+          }
+        ]
+      },
+      {
+        "stock": "s1.2",
+        "label": "Long stock",
+        "length": 2400000,
+        "usable": 2380000,
+        "partLength": 1700000,
+        "kerfLoss": 12000,
+        "leftover": 668000,
+        "cuts": [
+          {
+            "piece": "p2.2",
+            "start": 10000,
+            "end": 610000,
+            "kerfAfter": 3000,
+            "label": "Short rail",
+            "length": 600000
+          },
+          {
+            "piece": "p2.3",
+            "start": 613000,
+            "end": 1213000,
+            "kerfAfter": 3000,
+            "label": "Short rail",
+            "length": 600000
+          },
+          {
+            "piece": "p3.2",
+            "start": 1216000,
+            "end": 1466000,
+            "kerfAfter": 3000,
+            "label": "Small block",
+            "length": 250000
+          },
+          {
+            "piece": "p3.3",
+            "start": 1469000,
+            "end": 1719000,
+            "kerfAfter": 3000,
+            "label": "Small block",
+            "length": 250000
+          }
+        ]
+      }
+    ],
+    "unused": []
+  }
+}
