@@ -2,6 +2,8 @@
 
 **See what fits. Keep track of what doesn’t.**
 
+[Open Offcutlane](https://offcutlane.vercel.app)
+
 A local planner for straight cuts from finite stock lengths and remnants. Enter the lengths you have, the pieces you need, and your cut allowances. Get a deterministic suggested allocation with complete piece accounting.
 
 ![An actual exported allocation overview](examples/rails-layout.svg)
